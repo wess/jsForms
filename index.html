@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+		<script src="js/jquery.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/forms.js" type="text/javascript" charset="utf-8"></script>
+		<script type="text/javascript" charset="utf-8">
+			$(function(){
+				var myForm = new forms.Form({
+					username: forms.Fields.text({
+						name:'username',
+						id:'id_username',
+						classes:'formfield,redborder',
+						validate: 'required',
+						value:'simple value',
+					})
+				});
+				
+				$('#testForm').prepend(myForm.buildDL());
+			})
+		</script>
+	</head>
+	<body>
+		<form id="testForm" action="" method="get" accept-charset="utf-8">
+			
+			<p><input type="submit" value="Continue &rarr;"></p>
+		</form>
+	</body>
+</html>
